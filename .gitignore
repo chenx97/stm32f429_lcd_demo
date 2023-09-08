@@ -1,0 +1,10 @@
+/target/
+Cargo.lock
+**.orig
+**~
+**.bk
+**.sw*
+bloat_log*
+itm.fifo
+itm.txt
+.vscode
