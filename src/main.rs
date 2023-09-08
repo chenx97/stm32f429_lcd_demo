@@ -39,7 +39,7 @@ fn main() -> ! {
             green_led.toggle();
 
             // Toggle red LED only if user button is pressed
-            if button.is_high() == true {
+            if button.is_high() {
                 red_led.toggle();
             }
 
