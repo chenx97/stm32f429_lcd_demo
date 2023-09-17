@@ -8,3 +8,6 @@ bloat_log*
 itm.fifo
 itm.txt
 .vscode
+a.out
+img/*.rs
+img/*.rgb

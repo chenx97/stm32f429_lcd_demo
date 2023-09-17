@@ -8,24 +8,21 @@ edition = "2021"
 [dependencies]
 cortex-m = "*"
 cortex-m-rt = "*"
-ssd1306 = "0.4"
-nb = "1.0"
+ili9341 = { version = "*", path = "ili9341-rs" }
+display-interface = "0.4.0"
+display-interface-spi = "0.4.0"
+embedded-graphics = "0.8.0"
 panic-halt = "0.2.0"
-l3gd20 = "0.2.0"
-
-[dependencies.embedded-hal]
-features = ["unproven"]
-version = "0.2.3"
+embedded-hal = "0.2.0"
 
 [dependencies.stm32f4xx-hal]
 default-features = false
-features = ["rt", "stm32f429", "ltdc" ]
+features = ["rt", "stm32f429"]
 version = "0.17.0"
 
 [profile.dev]
 debug = true
 
 [profile.release]
-debug = true
 lto = true
 opt-level = "s"

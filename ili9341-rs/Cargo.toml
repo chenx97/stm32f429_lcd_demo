@@ -1,0 +1,32 @@
+# Copyright 2022 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+[package]
+name = "ili9341"
+version = "0.0.0"
+description = "A platform agnostic driver to interface with the ILI9341 (ald ILI9340C) TFT LCD display"
+authors = ["Yuri Iozzelli <y.iozzelli@gmail.com>"]
+categories = ["embedded", "hardware-support", "no-std"]
+keywords = ["embedded-hal-driver", "display", "LCD"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/yuri91/ili9341-rs"
+edition = "2021"
+
+
+[dependencies]
+display-interface = "0.4.0"
+embedded-hal = "0.2.0"
+
+[dependencies.embedded-graphics-core]
+optional = true
+version = "0.4.0"
+
+[dev-dependencies]
+cortex-m-rtic = "1.0.0"
+cortex-m = "0.7.3"
+cortex-m-rt = "0.7.0"
+defmt-rtt = "0.3.0"
+panic-semihosting = "0.6"
+
+[features]
+default = ["graphics"]
+graphics = ["embedded-graphics-core"]
